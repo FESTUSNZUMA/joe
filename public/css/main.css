@@ -1,0 +1,509 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: black;
+	color: white;
+}
+#background{
+	
+	background-color: #000;
+	
+	background-image: url("/assets/images/bg.jpg");
+	background-size: cover;
+	background-position: center;
+	width: 100vw;
+	height: 100vh;
+
+}
+.loginContainer {
+	color: #fff;
+	font-family: "Helvetica Neue","Helvetica","Arial", sans-serif;
+	font-weight: normal;
+	line-height: 1em;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	
+}
+#inputContainer {
+	width: 400px;
+	padding: 45px;
+	float: left;
+	border-right: 1px solid #999;
+}
+#inputContainer a{
+	
+	width: 150px;
+	margin: 0px 0px 0px 50px;
+	text-decoration: none;
+	display: block;
+	color: white;
+	position: relative;
+}
+#inputContainer a:after{
+content: "";
+width: 100%;
+height: 2px;
+background-color: gray;
+position: absolute;
+bottom: 0;
+left: 0;
+
+
+}
+#inputContainer label{
+	color:white;
+	font-size:20px;
+	display: block;
+	margin-top:20px;
+}
+
+.inputText{
+	display: block;
+	background-color: transparent;
+	border: 0;
+	border-bottom: 1px solid white;
+	height: 27px;
+	line-height: 27px;
+	width: 100%;
+	padding: 20px;
+	margin-top:10px;
+}
+#inputContainer button{
+	background-color: transparent;
+	border: 1px solid white;
+	border-radius: 250px;
+	color: white;
+	display: block;
+	font-size: 14px;
+	height: 41px;
+	width: 100%;
+	margin: 20px auto;
+	cursor: pointer;
+
+
+}
+.loginText{
+	padding: 45px;
+	
+}
+.loginText h1{
+	color: #07d159;
+	font-weight: bold;
+	font-size: 50px;
+}
+.loginText h2{
+	font-weight: bold;
+	margin: 35px 0px;
+
+}
+.loginText ul{
+	padding: 0;
+	margin: 0;
+}
+.loginText ul li{
+	font-size: 18px;
+	list-style-type: none;
+	padding: 10px;
+}
+.nowPlayingBarContainer{
+	width: 100%;
+	background-color:#282828;
+	bottom: 0;
+	position: fixed;
+	z-index: 1;
+	
+}
+.nowPlayingBar{
+	display: flex;
+	align-items: center;
+	height: 90px;
+	padding: 16px;
+	
+}
+.nowPlayingLeft,
+.nowPlayingRight{
+width: 30%;
+flex-basis: 30%;
+}
+.volumeBar{
+	width: 300px;
+	float: right;
+
+}
+.volumeBar .progressBar {
+	width: 125px;
+}
+.nowPlayingCenter{
+	flex-basis:40%;
+	width: 30%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+}
+.nowPlayingBar .content{
+	width: 100%;
+
+
+
+}
+.content .buttons{
+	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.buttons .controlButton{
+	background-color: transparent;
+	border: none;
+	
+	cursor: pointer;
+}
+.controlButton img{
+	width: 22px;
+	height: 22px;
+	object-fit: cover;
+}
+.controlButton.play img,
+.controlButton.pause img{
+width: 40px;
+	height: 40px;
+	object-fit: cover;	
+}
+.playbackBar{
+	display: flex;
+	align-items: center;
+}
+.progressTime{
+	text-align: center;
+	color: #a0a0a0;
+	font-size: 14px;
+	margin: 0px 2px;
+
+}
+.progressBar{
+	width: 100%;
+	cursor: pointer;
+	display: inline-flex;
+	
+}
+.progressBarBg{
+	background-color:#404040;
+	height: 4px;
+	border-radius: 2px;
+	width: 100%;
+}
+.progress{
+	background-color: #a0a0a0;
+	width: 1%;
+	height: 4px;
+	border-radius: 2px;
+
+}
+#nowPlayingLeft .albumArtwork {
+	height: 100%;
+    max-width: 57px;
+    margin-right: 15px;
+    float: left;
+    background-size: cover;
+}
+
+#nowPlayingLeft .trackInfo {
+	display: table;
+}
+
+#nowPlayingLeft .trackInfo .trackName {
+	margin: 6px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+#nowPlayingLeft .trackInfo .artistName span {
+	font-size: 19px;
+    color: green;
+}
+.albumLink img{
+	height: 50px;
+	width:50px;
+	object-fit: cover;
+}
+.albumLink img:hover{
+	cursor: pointer;
+}
+nav {
+	background-color: black;
+	display: flex;
+	align-items: center;
+	color: white;
+	justify-content: space-between;
+	padding: 10px 0px;
+	font-family: "Times New Roman", Times, serif;
+}
+nav .leftBar{
+	width: 40%;
+	flex-basis: 40%;
+}
+nav .centerBar{
+display: flex;
+width:40%;
+
+}
+nav .rightBar{
+	width: 20%;
+	float: left;
+}
+.searchInput {
+	border: none;
+	width: 70%;
+	height: 20px;
+	border: 1px black;
+	background-color: gray;
+	color: white;
+	border-radius: 250px;
+}
+.topContainer{
+	margin-top: 1px;
+	border-top: 1px solid #999;
+}
+.navbarContainer{
+
+	background-color: #000;
+	width: 300px;
+	position: fixed;
+	color: white;
+	border-right: 2px solid #999;
+	left: 0;
+	height: 100%;
+	border-right: 2px solid white;
+	padding-bottom: 100px;
+	
+
+	
+}
+.userSignup{
+	margin:20px auto;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+
+}
+.userSignup .userImages{
+	background-color: transparent;
+}
+
+
+.userImg{
+	
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+.userLogin{
+margin-left: 10px;
+padding:10px 0px;
+}
+.userLogin a{
+	font-size: 17px;
+	text-decoration: none;
+	color: white;
+}
+.navBar{
+	display: flex;
+	flex-direction: column;
+	
+	padding: 10px;
+}
+.musicLinks{
+	list-style: none;
+}
+.musicLinks li a{
+	display: block;
+	text-decoration: none;
+	padding: 8px 10px;
+	color: white;
+	font-size: 17px;
+}
+.centerContainer{
+	margin-left: 300px;
+
+
+	
+}
+.albumContainer{
+	margin: 20px 0px 0px 5px;
+	padding: 10px 5px;
+
+	color: white;
+}
+.flexViewItems{
+	display: flex;
+	align-items: center;
+}
+.flexItem{
+	flex-basis: 25%;
+	width: 25%;
+	margin-right: 10px;
+	min-width: 150px;
+
+}
+
+.flexItem img{
+	width: 100%;
+}
+.flexItem a{
+	display: block;
+	text-decoration: none;
+	color: white;
+}
+.flexItemInfo {
+	margin-top: 10px;
+}
+.flexItemInfo h2{
+text-align: center;
+text-overflow: ellipsis;
+font-weight: 300;
+font-size: 20px;
+}
+.albumContent{
+	margin-left: 300px;
+	padding: 10px 0px 10px 0px;
+	background-color: black;
+	color: white;
+
+}
+
+.entityInfo{
+	display: flex;
+	width: 100%;
+
+
+}
+.entityInfo .leftInfo {
+	width:20%;
+
+
+}
+.entityInfo .leftInfo img{
+	width: 100%;
+}
+
+.rightInfo {
+	padding:5px 10px 5px 40px;
+	width: 70%;
+
+
+}
+.rightInfo span{
+display: block;
+
+}
+.rightInfo .albumTitle{
+	font-size: 30px;
+}
+.rightInfo .albumArtist{
+	color: #939393;
+	font-weight: 200;
+	margin-top: 10px;
+	font-size: 15px;
+}
+.albumNumbers{
+	color: #939393;
+	font-weight: 200;
+	margin-top: 10px;
+	font-size: 15px;
+}
+.trackListContainer{
+	margin-top: 20px;
+}
+.trackList{
+margin:0;
+padding: 0;
+list-style: none;
+}
+.trackListRow{
+	display: flex;
+	align-items: center;
+	gap:20px;
+	
+
+	padding: 15px 10px;
+}
+.trackListRow img {
+	
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	object-fit: cover;
+	visibility: hidden;
+
+
+}
+.trackListRow span{
+	color: #939393;
+}
+.trackListRow:hover{
+	background-color: #282828;
+}
+.trackListRow:hover img{
+	visibility: visible;
+}
+.trackCount{
+	width: 10%;
+	display: flex;
+	align-items: center;
+}
+.trackNumber{
+
+}
+.trackCount .play{
+	margin-left: 20px;
+}
+.trankInfo {
+	width: 50%;
+}
+.artistAlbum h2{
+	text-align: center;
+}
+.slider{
+	margin: 20px;
+	width: 100%;
+	overflow-x: hidden;
+	background-color: coral;
+	padding: 12px 10px;
+}
+
+.sliderContainer{
+position: relative;
+display: flex;
+
+transition: transform 0.4s ease-in;
+	
+}
+.sliderImg{
+
+	
+	padding:20px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-basis: 100%;
+	min-width: 100%;
+	
+}
+.sliderImg a {
+	text-decoration: none;
+	color: white;
+  
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
